@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verlyn Jade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #ffd700; /* Rose gold color */
+            border: 2px solid #ffd700;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .tab:hover {
+            background-color: #ff69b4; /* Lighter pink color on hover */
+            color: white;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab" onclick="showTab('home')">Home</div>
+        <div class="tab" onclick="showTab('about')">About</div>
+        <div class="tab" onclick="showTab('education')">Education</div>
+    </div>
+    <div class="content" id="homeContent">
+        <h2>Home</h2>
+        <p>Hello, I am V. Welcome To My Personal Website! ^^ </p>
+    </div>
+    <div class="content" id="aboutContent">
+        <h2>About</h2>
+        <img src="me.jpg" alt="Your Picture">
+        <p>I am named as Verlyn Jade T. Obina. Born on 26th Day of July, year 2004 so basically I am now 19 years old. I am from the City of Muntinlupa. I am an eldest and only daughter of a family of six members.</p> 
+        <p>I am also a working student as of now. I am getting my first time work experience at one of the famous casual restaurant in country and oversees. It help me to overcome many weaknesses and enhances many skills.</p> 
+        <p>I am curious with everything, and I love exploring and discovering things I haven't known, foods I haven't eaten yet, places I've never been to, and many more. I always go and hang out to open places where I can get fresh air and spend my time there to relax.</p>
+    </div>
+    <div class="content" id="educationContent">
+        <h2>Education</h2>
+        <p>I completed my primary education in an elementary public school in Barangay Tunasan as 4th Performing Pupil of our class.</p>
+        <p>I took my junior highschool years in Muntinlupa National HighSchool Tunasan Annex where I met many friends and made many memorable moments with them.</p>
+        <p>When I got to Senior High, I studied at Muntinlupa National HighSchool Main. I took STEM and it helps me to develop essential skills that makes me also completed my secondary years with Honors.</p>
+        <p>Now, I am on the last stage of my education years. I am on my 2nd Year taking Bachelor's of Science in Computer Science at Pamantasan ng Lungsod ng Muntinlupa.</p>
+        <p>I am also a training president of one of the PLMun Organizations, The Rotaract Club of PLMun-MBD. It is a community-based organization leads by plmun students which focuses on never-ending needs of community and taking action to address difficulies.</p>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            const tabs = ['home', 'about', 'education'];
+            tabs.forEach(tab => {
+                const content = document.getElementById(`${tab}Content`);
+                const tabElement = document.getElementById(tab);
+                if (tab === tabName) {
+                    content.style.display = 'block';
+                    tabElement.style.backgroundColor = '#ffd700';
+                    tabElement.style.color = 'black';
+                } else {
+                    content.style.display = 'none';
+                    tabElement.style.backgroundColor = '#ffd700';
+                    tabElement.style.color = 'black';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
